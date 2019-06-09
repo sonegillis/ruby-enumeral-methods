@@ -1,5 +1,5 @@
 # Ruby Enumerable methods implementation
-Here some enumerable methods of ruby have been implemented with custom names i.e each method is prepended with **my_**. For example the ruby **#each** method is implemented and named as **#my_each**. The methods are contained in the **Enumerable** module
+Here, some enumerable methods of ruby have been implemented with custom names i.e each method is prepended with **my_**. For example, the ruby **#each** method is implemented and named as **#my_each**. The methods are contained in the **Enumerable** module
 
 ## Methods implemented 
 * each
