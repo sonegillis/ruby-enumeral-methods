@@ -109,3 +109,4 @@ array.my_count                               # 6
 proc = Proc.new{ |n| n*2 }      
 [3,5,4].my_map(&proc)                        # [6, 10, 8]
 multiply_els([2,4,5])                        # 40
+
