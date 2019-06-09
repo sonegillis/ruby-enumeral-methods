@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 # module implements some enumerable methods of ruby
 # by adding my_ to the default method names
+=======
+# frozen_string_literal: true
+
+>>>>>>> d2008010b057d6ef531deb634d102a53f00f23c7
 module Enumerable
   def my_each
     if is_a? Array
@@ -95,6 +100,7 @@ end
 
 array = [3, 1, 5, 6, 3, 6]
 
+<<<<<<< HEAD
 #testing each method in enumerable module on array variable
 array.my_each{ |n| print n }                          # 315636
 puts ""
@@ -118,3 +124,28 @@ print [3,5,4].my_map(&proc)                           # [6, 10, 8]
 puts ""
 print multiply_els([2,4,5])                           # 40
 puts ""
+=======
+# testing each method in enumerable module on array variable
+array.my_each { |n| print n }                                    # 315636
+puts ''
+array.my_each_with_index { |n, i| puts "#{n} #{i}" }             # (3 0) (1 1) (5 2) (6 3) (3 4) (6 5)
+print array.my_select(&:even?) # [6, 6]
+puts ''
+print array.my_all? { |n| n < 10 }                               # true
+puts ''
+print array.my_any? { |n| n < 10 }                               # true
+puts ''
+print array.my_none? { |n| n > 10 }                              # true
+puts ''
+print array.my_count(6) # 2
+puts ''
+print array.my_count { |n| n >= 3 } # 5
+puts ''
+print array.my_count # 6
+puts ''
+proc = proc { |n| n * 2 }
+print [3, 5, 4].my_map(&proc)                                     # [6, 10, 8]
+puts ''
+print multiply_els([2, 4, 5])                                     # 40
+puts ''
+>>>>>>> d2008010b057d6ef531deb634d102a53f00f23c7
