@@ -1,4 +1,6 @@
 module Enumerable
+  # module implements some enumerable methods of ruby
+  # by adding my_ to the default method names
   def my_each
     if self.kind_of?Array
       for e in self
@@ -95,25 +97,25 @@ end
 array = [3,1,5,6,3,6]
 
 #testing each method in enumerable module on array variable
-array.my_each{ |n| print n }                                    #315636
+array.my_each{ |n| print n }                                    # 315636
 puts ""
-array.my_each_with_index{ |n, i| puts "#{n} #{i}" }            #
-print array.my_select{ |n| n%2 == 0 }
+array.my_each_with_index{ |n, i| puts "#{n} #{i}" }             # (3 0) (1 1) (5 2) (6 3) (3 4) (6 5)
+print array.my_select{ |n| n%2 == 0 }                           # [6, 6]
 puts ""
-print array.my_all?{ |n| n < 10 }
+print array.my_all?{ |n| n < 10 }                               # true
 puts ""
-print array.my_any?{ |n| n < 10 }
+print array.my_any?{ |n| n < 10 }                               # true
 puts ""
-print array.my_none?{ |n| n > 10 }
+print array.my_none?{ |n| n > 10 }                              # true
 puts ""
-print array.my_count(6)
+print array.my_count(6)                                         # 2
 puts ""
-print array.my_count{ |n| n >= 3 }
+print array.my_count{ |n| n >= 3 }                              # 5
 puts ""
-print array.my_count
+print array.my_count                                            # 6
 puts ""
-proc = Proc.new{ |n| n*2 }
-print [3,5,4].my_map(&proc)
+proc = Proc.new{ |n| n*2 }      
+print [3,5,4].my_map(&proc)                                     # [6, 10, 8]
 puts ""
-print multiply_els([2,4,5])
+print multiply_els([2,4,5])                                     # 40
 puts ""
