@@ -24,7 +24,7 @@ The **#inject** method implementation (**#my_inject**) has been tested with the 
 ```bash
   $ git clone https://github.com/sonegillis/ruby-enumeral-methods.git
 ```
-2. Navigate to the project file
+2. Navigate to the project directory
 ```bash
   $ cd ruby-enumeral-methods
 ```
